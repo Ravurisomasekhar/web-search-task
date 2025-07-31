@@ -46,8 +46,9 @@ class WebCrawler:
 def main():
     crawler = WebCrawler()
     start_url = "https://example.com"
-    crawler.craw(start_url)
-
+    crawler.crawl(start_url)   
+    # fixed this part.
+# AttributeError: 'WebCrawler' object has no attribute 'craw'
     keyword = "test"
     results = crawler.search(keyword)
     crawler.print_results(results)
