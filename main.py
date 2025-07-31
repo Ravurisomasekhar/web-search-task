@@ -31,7 +31,9 @@ class WebCrawler:
     def search(self, keyword):
         results = []
         for url, text in self.index.items():
-            if keyword.lower() not in text.lower():
+            if keyword.lower() in text.lower():
+                # The logic is reversed. This adds URLs not containing the keyword
+                # error resolved
                 results.append(url)
         return results
 
