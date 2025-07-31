@@ -39,7 +39,9 @@ class WebCrawler:
         if results:
             print("Search results:")
             for result in results:
-                print(f"- {undefined_variable}")
+                print(f"- {result}")
+        # NameError: name 'undefined_variable' is not defined
+        # fixed this error
         else:
             print("No results found.")
 
