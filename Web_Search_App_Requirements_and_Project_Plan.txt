@@ -1,0 +1,75 @@
+WebSite-Specific Smart Search App
+Requirements Document & Project Plan
+
+1. Overview
+A cross-platform web search application that allows users to search within a specific website (entered by the user), delivering highly relevant and user-friendly results. The app should offer advanced features like keyword highlighting, filtering, and AI-based suggestions, with a simple, intuitive user interface optimized for all devices.
+
+
+2. Functional Requirements
+2.1 Website-Specific Search
+Users can input a URL and a search query. The system performs a search only within the provided website. Results will be ranked by relevance, prioritizing title match, keyword density, and semantic similarity.
+
+2.2 Search Result Display
+Results include: Title, Snippet/summary, URL. Searched keywords are highlighted in the results.
+
+2.3 Filtering Options
+Filters based on: Date (e.g., last week, month, year), Content type (articles, PDFs, images), Keyword category.
+
+2.4 AI-Driven Suggestions
+Suggested queries based on user's search history, most searched terms, and semantic expansion.
+
+2.5 Platform Support
+Mobile apps for iOS and Android. Web app as responsive standalone site. Device compatibility across smartphones, tablets, and desktops.
+
+2.6 User Interface
+Simple and minimalist design. Home screen with search bar and optional filters. Search results page with fast loading. Optional dark/light mode support.
+
+
+3. Non-Functional Requirements
+� Performance: Search results in under 2 seconds (typical case)
+� Scalability: Support at least 10,000 concurrent users
+� Accessibility: WCAG 2.1 AA compliant
+� Security: HTTPS-only, no user data logging unless opted in
+� Language: English (Phase 1), future localization possible
+
+
+4. BDD Feature Scenarios (Sample)
+Feature: Search Specific Website
+Scenario: User searches a specific website for a keyword Given the user has entered "https://example.com" into the site field And the user has entered "quantum energy" into the search field When the user clicks "Search" Then the app should return results only from "https://example.com" And the results should highlight the keyword "quantum energy"
+
+Feature: Show AI Suggestions
+Scenario: User starts typing a query Given the user is on the search screen When the user types "quant" Then te app should display suggestions like "quantum energy", "quantum computing
+Project Plan
+Target Launch: February 2026
+
+
+Milestones
+
+Milestone                      >Timeline (Start-End)        Deliverables
+Requirement Finalization        Aug 6 - Aug 10, 2025        Finalized Requirements Document
+UI/UX Design                    Aug 11 - Aug 25, 2025       Wireframes, Design Prototypes
+Core Search Engine (MVP)        Aug 26 - Sep 25, 2025       Working site crawler & indexer
+Mobile App Infrastructure       Sep 10 - Oct 10, 2025       Search UI + API integration
+Advanced Features               Oct 11 - Nov 5, 2025        AI Suggestions, Filters, Highlighting
+Web App Development             Nov 6 - Nov 25, 2025        Fully functional web UI
+Cross-Platform Testing & QA     Nov 26 - Dec 20, 2025       Test Reports, Bug Fixes
+Deployment Prep & Beta          Jan 5 - Jan 15, 2026        App Store submission, Beta feedback loop
+Final Launch                    February 1, 2026            Official Release
+
+Team Structure
+� Product Manager: Requirement finalization, client sync
+� UX/UI Designer: Design wireframes, responsive layout
+� Backend Developer: Web crawler, API, database
+� Mobile Developers: iOS and Android app development
+� AI Engineer: Query suggestion engine
+� QA Engineers: Manual & automated testing
+� DevOps: CI/CD pipeline, app store deployment
+
+
+Tools & Tech Stack
+� Frontend: Flutter (mobile), React (web)
+� Backend: Python (Flask/FastAPI), Node.js (optional)
+� Search Engine: Elasticsearch / Custom-built indexer
+� AI/ML: NLP libraries (e.g., spaCy, Transformers)
+� Testing: pytest, Selenium, Appium
+� Project Management: Jira, Figma, GitHub, Slack
